@@ -1,6 +1,14 @@
-import { Stack } from 'expo-router';
+import { Redirect, Stack } from 'expo-router';
+
+import { useAuth } from '@/providers/AuthProvider';
 
 const Layout = () => {
+  const { authState } = useAuth();
+
+  if (authState.authenticated) {
+    return <Redirect href="/(app)/(authenticated)" />;
+  }
+
   return (
     <Stack>
       <Stack.Screen
