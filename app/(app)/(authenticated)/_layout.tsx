@@ -28,7 +28,10 @@ const Layout = () => {
           options={{ title: 'Schedule Consultation', headerShown: true }}
         />
 
-        <Stack.Screen name="chat/[id]/index" options={{ title: '' }} />
+        <Stack.Screen
+          name="chat/[id]/index"
+          options={{ title: '', headerShown: true }}
+        />
 
         <Stack.Screen
           name="chat/[id]/manage"
